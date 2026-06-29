@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fitness-Analyse · Finn Athl</title>
+<title>Fitness-Analyse · leanwithfinn</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -201,7 +201,7 @@ textarea { min-height: 80px; }
 
 <header>
   <div class="inner">
-    <div class="logo">Finn Athl <span>Coaching</span></div>
+    <div class="logo">leanwithfinn       <span>Coaching</span></div>
     <div class="header-tag">Onboarding Analyse</div>
   </div>
 </header>
@@ -227,10 +227,10 @@ textarea { min-height: 80px; }
   <div class="hero" id="hero-block">
     <div class="hero-eyebrow">Onboarding Analyse</div>
     <h1>Lass mich verstehen,<br>wo du wirklich stehst.</h1>
-    <p>Füll diesen Fragebogen vollständig und ehrlich aus. Je mehr Kontext du gibst, desto präziser kann ich dir helfen.</p>
+    <p>Füll diesen Fitness-Analyse vollständig und ehrlich aus. Je mehr Kontext du gibst, desto präziser kann ich dir helfen.</p>
     <div class="hero-meta">
       <span><div class="dot"></div>10 Bereiche</span>
-      <span><div class="dot"></div>15–20 Minuten</span>
+      <span><div class="dot"></div>15 Minuten</span>
       <span><div class="dot"></div>Vertraulich</span>
     </div>
   </div>
@@ -248,7 +248,7 @@ textarea { min-height: 80px; }
           <div class="field"><label>Instagram-Name <span class="req">Pflicht</span></label><input type="text" id="instagram" placeholder="@deinname"></div>
           <div class="field"><label>Telefonnummer (optional)</label><input type="text" id="telefon" placeholder="+49 151 ..."></div>
         </div>
-        <div class="err" id="err0">Bitte füll Name, E-Mail und Instagram aus.</div>
+        <div class="err" id="err0">Bitte fülle Name, E-Mail- Adresse und deinen Instagram-Namen aus.</div>
       </div>
     </div>
     <div class="step-nav"><span></span><button class="btn-next" onclick="go(0)">Weiter →</button></div>
@@ -260,16 +260,16 @@ textarea { min-height: 80px; }
       <div class="section-header"><div class="sec-num">1</div><div class="section-title">Persönliche Daten & Ausgangslage</div></div>
       <div class="section-body">
         <div class="row4">
-          <div class="field"><label>Alter</label><input type="number" id="alter" placeholder="34" min="10" max="100"></div>
-          <div class="field"><label>Größe (cm)</label><input type="number" id="groesse" placeholder="178"></div>
-          <div class="field"><label>Gewicht (kg)</label><input type="number" id="gewicht" placeholder="82"></div>
-          <div class="field"><label>Taillenumfang (cm)</label><input type="number" id="taille" placeholder="88"></div>
+          <div class="field"><label>Alter</label><input type="number" id="alter" placeholder="" min="10" max="100"></div>
+          <div class="field"><label>Größe (cm)</label><input type="number" id="groesse" placeholder=""></div>
+          <div class="field"><label>Gewicht (kg)</label><input type="number" id="gewicht" placeholder=""></div>
+          <div class="field"><label>Taillenumfang (cm)</label><input type="number" id="taille" placeholder=""></div>
         </div>
         <div class="row2">
-          <div class="field"><label>Hüftumfang (cm, optional)</label><input type="number" id="huefte" placeholder="98"></div>
-          <div class="field"><label>Ruhe-Herzfrequenz (bpm, optional)</label><input type="number" id="herzfrequenz" placeholder="68"><span class="hint">Morgens vor dem Aufstehen messen</span></div>
+          <div class="field"><label>Hüftumfang (cm, optional)</label><input type="number" id="huefte" placeholder=""></div>
+          <div class="field"><label>Ruhe-Herzfrequenz (bpm, optional)</label><input type="number" id="herzfrequenz" placeholder=""><span class="hint">Morgens vor dem Aufstehen messen</span></div>
         </div>
-        <div class="field"><label>Biologisches Geschlecht</label>
+        <div class="field"><label>Geschlecht</label>
           <div class="pill-group" id="geschlecht"><div class="pill" onclick="solo(this,'geschlecht')">Männlich</div><div class="pill" onclick="solo(this,'geschlecht')">Weiblich</div><div class="pill" onclick="solo(this,'geschlecht')">Divers / keine Angabe</div></div>
         </div>
         <div class="field"><label>Aktueller Fitnesszustand</label>
@@ -278,12 +278,12 @@ textarea { min-height: 80px; }
         <div class="sec-divider">Körperzusammensetzung</div>
         <div class="field"><label>Grobe Einschätzung deines Körperfettanteils</label><span class="hint">Wähle die Beschreibung, die am besten auf dich zutrifft</span>
           <div class="bf-grid" id="koerperfett">
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#4A8C62,#7EBC9A)"></div><div class="bf-label">Sehr schlank</div><div class="bf-pct">♂ 6–12% / ♀ 14–20%</div></div>
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#7EBC9A,#B8D4A0)"></div><div class="bf-label">Fit / definiert</div><div class="bf-pct">♂ 13–17% / ♀ 21–26%</div></div>
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#D4C060,#E8D080)"></div><div class="bf-label">Durchschnitt</div><div class="bf-pct">♂ 18–24% / ♀ 27–32%</div></div>
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#E8A060,#D07040)"></div><div class="bf-label">Übergewicht</div><div class="bf-pct">♂ 25–30% / ♀ 33–38%</div></div>
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#D07040,#B04020)"></div><div class="bf-label">Stark übergewichtig</div><div class="bf-pct">♂ 30%+ / ♀ 38%+</div></div>
-            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#aaa,#ccc)"></div><div class="bf-label">Weiß nicht</div><div class="bf-pct">Keine Einschätzung</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#4A8C62,#7EBC9A)"></div><div class="bf-label">Sehr schlank</div><div class="bf-pct">6–12%</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#7EBC9A,#B8D4A0)"></div><div class="bf-label">Fit / definiert</div><div class="bf-pct">13–17%</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#D4C060,#E8D080)"></div><div class="bf-label">Durchschnitt</div><div class="bf-pct">18–24%</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#E8A060,#D07040)"></div><div class="bf-label">Übergewicht</div><div class="bf-pct">25–30%</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#D07040,#B04020)"></div><div class="bf-label">Stark übergewichtig</div><div class="bf-pct">30%+</div></div>
+            <div class="bf-card" onclick="pickBF(this,'koerperfett')"><div class="bf-bar" style="background:linear-gradient(90deg,#aaa,#ccc)"></div><div class="bf-label">Weiß ich nicht</div><div class="bf-pct">Keine Einschätzung</div></div>
           </div>
         </div>
         <div class="field"><label>Körperliche Einschränkungen, Verletzungen, Erkrankungen</label><span class="hint">z. B. Rückenprobleme, Knie, Bluthochdruck – oder „Keine"</span><textarea id="einschraenkungen" placeholder="Beschreibe bekannte Einschränkungen ..."></textarea></div>
@@ -301,7 +301,7 @@ textarea { min-height: 80px; }
           <div class="field"><label>Wann war die letzte aktive Phase?</label><div class="pill-group" id="letzte_phase"><div class="pill" onclick="solo(this,'letzte_phase')">Aktuell noch aktiv</div><div class="pill" onclick="solo(this,'letzte_phase')">Vor &lt; 3 Monaten</div><div class="pill" onclick="solo(this,'letzte_phase')">Vor 3–6 Monaten</div><div class="pill" onclick="solo(this,'letzte_phase')">Vor 6–12 Monaten</div><div class="pill" onclick="solo(this,'letzte_phase')">Vor 1–2 Jahren</div><div class="pill" onclick="solo(this,'letzte_phase')">Vor mehr als 2 Jahren</div></div></div>
         </div>
         <div class="field"><label>Was genau wurde trainiert?</label><div class="pill-group" id="letzte_art"><div class="pill" onclick="multiPill(this)">Ganzkörper</div><div class="pill" onclick="multiPill(this)">Split (Ober-/Unterkörper)</div><div class="pill" onclick="multiPill(this)">Push/Pull/Legs</div><div class="pill" onclick="multiPill(this)">Cardio / Laufen</div><div class="pill" onclick="multiPill(this)">Mannschaftssport</div><div class="pill" onclick="multiPill(this)">Kursangebote</div><div class="pill" onclick="multiPill(this)">Kein strukturiertes Training</div></div></div>
-        <div class="field"><label>Was hat damals funktioniert / nicht funktioniert?</label><span class="hint">Das ist entscheidend für die Fehleranalyse und Plananpassung.</span><textarea id="letzte_analyse" placeholder="z. B. Guter Kraftfortschritt, aber aufgehört wegen Zeitmangel ..."></textarea></div>
+        <div class="field"><label>Was hat damals funktioniert / nicht funktioniert?</label><span class="hint">Das ist entscheidend für deine Fehleranalyse und Plananpassung.</span><textarea id="letzte_analyse" placeholder="z. B. Guter Kraftfortschritt, aber aufgehört wegen Zeitmangel ..."></textarea></div>
       </div>
     </div>
     <div class="step-nav"><button class="btn-back" onclick="back(1)">← Zurück</button><button class="btn-next" onclick="go(1)">Weiter →</button></div>
@@ -323,7 +323,7 @@ textarea { min-height: 80px; }
           <div class="field"><label>Wunsch-Zielgewicht (kg, falls relevant)</label><input type="number" id="zielgewicht" placeholder="z. B. 75 kg"></div>
           <div class="field"><label>Wunsch-Körperbild</label><textarea id="wunschkoerper" placeholder="Wie soll dein Körper in 12 Monaten aussehen?"></textarea></div>
         </div>
-        <div class="field"><label>Priorität: Fettverlust vs. Muskelaufbau</label><span class="hint">1 = reiner Fettverlust · 10 = reiner Muskelaufbau</span>
+        <div class="field"><label>Priorität: Fettverlust vs. Muskelaufbau</label><span class="hint">1 = reiner Fettverlust        · 10 = reiner Muskelaufbau</span>
           <div class="scale-outer"><div class="scale-wrap" id="prio_fett_muskel"><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">1</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">2</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">3</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">4</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">5</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">6</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">7</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">8</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">9</div><div class="scale-btn" onclick="scl(this,'prio_fett_muskel')">10</div></div><div class="scale-labels"><span>Nur Fett verlieren</span><span>Nur Muskeln aufbauen</span></div></div>
         </div>
       </div>
